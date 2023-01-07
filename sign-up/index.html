@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <p>You have been granted access to the platform.</p>
+    <p>Please create an account.</p>
+    <form action="/success" class="form" method="POST" name="newsletter"><input type="hidden" name="form-name"
+            value="newsletter">
+        <p hidden="">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required="" type="text" id="email" name="email" class="form-field">
+            </div>
+            <button class="button" type="submit">Sign Up</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

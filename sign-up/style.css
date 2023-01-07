@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+
+    --bg-color: #ECF2FF;
+    --text-color: #2B283A;
+    --title-color: #4A4E74;
+
+    --color-background: #27272c;
+    --color-primary: #ab79d6;
+    --color-on-primary: #351d4a;
+    --color-secondary: #d367c1;
+
+    --color-on-background: #c5c5ce;
+
+    --color-background-alt: #1e1c22;
+    --color-background-alt-alpha: rgba(30, 28, 34, .75);
+    --color-inverse: #fff;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    grid-gap: 0.5rem;
+    font-family: "Baloo 2", sans-serif;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+p,
+label {
+    margin: 0;
+    color: var(--color-on-background);
+}
+
+h1 {
+    color: var(--color-primary);
+    font-family: "Bubblegum Sans";
+    font-size: 5ch;
+}
+
+form {
+    grid-gap: 1rem;
+    display: grid;
+    justify-items: start;
+    margin-top: 2rem
+}
+
+.form-group {
+    grid-gap: .5em;
+    display: grid;
+    width: min(100%, 40ch)
+}
+
+.form-group+.button,
+.form-group+.form-group {
+    margin-top: 1rem
+}
+
+.form-group label {
+    font-size: 1.35rem;
+    line-height: 1;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.form-group input,
+.form-group textarea {
+    --outline-color: var(--color-primary);
+    background-color: var(--color-background-alt);
+    border: 2px solid;
+    border-radius: 4px;
+    color: var(--color-on-background);
+    font: inherit;
+    padding: 0 .5em;
+    width: 100%
+}
+
+.form-group input {
+    min-height: 35px
+}
+
+.form-group input:focus {
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
+    outline: 3px solid transparent;
+}
+
+.form-inline {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-inline .form-group {
+    --modifier: calc(30ch - 100%);
+    flex-basis: calc(var(--modifier)*999);
+    flex-grow: 1;
+    grid-template-areas: "group"
+}
+
+.form-inline .form-group>* {
+    grid-area: group
+}
+
+.form-inline .form-group label {
+    align-self: start;
+    background-image: linear-gradient(to top, var(--color-background-alt) 0 calc(50% - 2px), var(--color-background) calc(50% - 2px));
+    font-size: .9rem;
+    padding-left: .5em;
+    padding-right: .5em;
+    position: relative;
+    transform: translate(.5rem, -50%);
+    width: -webkit-max-content;
+    width: max-content
+}
+
+.form-inline .form-group+button {
+    margin-top: 0
+}
+
+/* Button */
+.button {
+    --button-background: var(--color-primary);
+    --button-color: var(--color-on-primary);
+    --outline-color: transparent;
+    align-items: center;
+    background-color: var(--button-background);
+    border: 2px solid transparent;
+    border-radius: .5em;
+    color: var(--button-color);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--brand-font-alt);
+    font-weight: var(--brand-font-alt-weight-bold);
+    gap: .5em;
+    justify-content: center;
+    line-height: calc(4px + 2ex);
+    min-width: 10ch;
+    padding: .55em .75em .5em;
+    text-align: center;
+    text-decoration: none;
+    transition: none .18s ease-in-out;
+    transition-property: background-color, color, border-color
+}
+
+.button:focus {
+    box-shadow: 0 0 0 max(.15em, 2px) var(--button-focus-inner, var(--button-color)), 0 0 0 max(.3em, 2px) var(--button-focus-outer, var(--button-background))
+}
+
+.button:active,
+.button:hover {
+    background-color: var(--button-hover-background-color, var(--button-color));
+    color: var(--button-hover-color, var(--button-background))
+}
+
+.button:active:not(.button-outlined),
+.button:hover:not(.button-outlined) {
+    border-color: var(--button-hover-border-color, currentColor)
+}
