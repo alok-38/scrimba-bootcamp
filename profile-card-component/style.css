@@ -43,7 +43,7 @@ body {
 
 .card .card-content img {
     border-radius: 50%;
-    /* transform: translateY(-50%); */
+    transform: translateY(-20%);
     border: 7px solid #fefefe;
     height: 200px;
     width: 50%;
@@ -73,7 +73,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-4.5rem);
+    transform: translateY(-2rem);
     letter-spacing: .1rem;
 }
 
@@ -93,6 +93,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card .card-footer .footer-item a {
+    text-decoration: none;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.4ch;
+}
+
+.card .card-footer .footer-item a:hover {
+    opacity: 1;
+    transition: 0.3s;
+    font-size: 1.5ch;
 }
 
 .card .card-footer .footer-item .status {
