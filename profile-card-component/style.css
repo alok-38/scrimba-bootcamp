@@ -8,5 +8,60 @@
 body {
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    background: url(./images/1280px-Galaxy_cluster_IDCS_J1426.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 450px;
+    background: #fefefe;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card .card-content img {
+    border-radius: 50%;
+    transform: translateY(-50%);
+    border: 7px solid #fefefe;
+    height: 100px;
+}
+
+.card .card-header {
+    flex: 0.3;
+}
+
+.card .card-header img {
+    width: 100%;
+}
+
+.card .card-content {
+    flex: 0.5;
+}
+
+.card .card-content p:first-of-type {
+    font-weight: bold;
+    font-size: 24px;
+    color: hsl(229, 23%, 23%);
+}
