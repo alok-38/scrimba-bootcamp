@@ -8,20 +8,5 @@
 body {
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Card */
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 450px;
-}
-
-.card .card-content img {
-    border-radius: 50%;
-    transform: translateY(-50%);
-    border: 7px solid #fefefe;
-}
