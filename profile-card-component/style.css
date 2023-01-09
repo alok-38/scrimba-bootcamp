@@ -43,9 +43,10 @@ body {
 
 .card .card-content img {
     border-radius: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     border: 7px solid #fefefe;
-    height: 100px;
+    height: 200px;
+    width: 50%;
 }
 
 .card .card-header {
@@ -69,6 +70,11 @@ body {
 .card .card-content p {
     color: hsl(227, 10%, 46%);
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-4.5rem);
+    letter-spacing: .1rem;
 }
 
 .card .card-footer {
@@ -79,6 +85,7 @@ body {
     justify-content: space-evenly;
     border-top: 2px solid #d8d9df;
     color: hsl(229, 23%, 23%);
+    padding: 2rem;
 }
 
 .card .card-footer .footer-item {
@@ -95,5 +102,11 @@ body {
 
 /* footer */
 .attribution {
+    color: #d8d9df;
+    word-spacing: .5ch;
+    letter-spacing: .1rem;
+}
+
+.attribution a {
     color: #d8d9df;
 }
