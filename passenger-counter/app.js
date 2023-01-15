@@ -8,5 +8,5 @@ incrementBtn.addEventListener("click", (event) => {
 });
 
 saveBtn.addEventListener('click', (event) => {
-    
+    countEl.innerText = 0;
 })

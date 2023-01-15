@@ -11,12 +11,36 @@
 </head>
 
 <body>
+    <main>
+        <div class="container flex">
+            <div class="card">
+                <h1 class="text-center">People entered</h1>
+                <h2 id="count-el" class="text-center">0</h2>
+                <div class="card__buttons">
+                    <!-- buttons -->
+                    <button id="increment-btn" class="btn">
+                        <img src="images/addIcon.svg" alt="addIcon">
 
-    <h1>People entered:</h1>
-    <button id="increment-btn">Increment</button>
-    <button id="save-btn">Save</button>
-    <h2 id="count-el">0</h2>
-    <script src="app.js"></script>
+                    </button>
+                    <button id="save-btn" class="btn"> <img src="images/saveIcon.svg" alt="saveIcon">
+                    </button>
+                </div>
+
+                <!-- people entered counter -->
+                <p id="save-el" class="text-center">Previous entries: </p>
+
+                <p class="text-center">Total entries: <span id="total-el"></span> </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="attribution">
+            <span> Project by <a href="https://scrimba.com/learn/learnjavascript/" target="_blank">Scrimba</a>.<br>
+                Coded by <a href="https://github.com/alok-38" target="_blank">Alok</a>.</span>
+        </div>
+    </footer>
 </body>
 
 </html>
