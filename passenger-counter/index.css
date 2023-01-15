@@ -32,7 +32,18 @@ button {
     background: darkred;
 }
 
+#increment-btn:hover {
+    background: rgb(74, 1, 1);
+    cursor: pointer;
+    color: aliceblue;
+}
+
 #save-btn {
     background: darkgreen;
 }
 
+#save-btn:hover {
+    background: rgb(1, 63, 1);
+    cursor: pointer;
+    color: aliceblue;
+}
