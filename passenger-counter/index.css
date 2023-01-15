@@ -164,12 +164,17 @@ footer {
     font-family: var(--ff-serif);
     font-size: 11px;
     text-align: center;
-    color: var(--clr-light-grey);
+    color: hsl(226, 21%, 12%);
 }
 
 .attribution a {
     text-decoration: none;
     color: hsl(226, 21%, 12%);
+}
+
+.attribution a:hover {
+    text-decoration: none;
+    color: hsl(13, 91%, 50%);
 }
 
 /* ---------------------- */
