@@ -18,8 +18,6 @@ let output = document.getElementById("sum-el");
 // "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"
 
 addButton.addEventListener("click", (event) => {
-  firstNum = parseInt(prompt("Enter the first number: "));
-  secondNum = parseInt(prompt("Enter the second number: "));
   let sum = firstNum + secondNum;
   output.textContent += sum;
 });
