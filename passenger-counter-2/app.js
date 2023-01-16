@@ -4,8 +4,9 @@ function insertAfter(referenceNode, newNode) {
 
 // Querieng DOM elements
 const countEl = document.getElementById("count-el");
-// Initialise a variable for counting
+// Initialise a variable for counting and total
 let count = 0;
+let total = 0;
 
 // Create two h3's
 const h3El = document.createElement("h3");
@@ -35,6 +36,13 @@ buttonEl.addEventListener("click", (event) => {
 
 buttonEl1.addEventListener("click", (event) => {
   h3El.innerText += " " + " " + " " + count + "-" + "-";
+  countEl.innerText = count;
+
+  // Sum up and render the same
+  total += parseInt(count);
+  h3El1.textContent += parseInt(total);
+
+  // reset counter variable and HTML after saving
   count = 0;
   countEl.innerText = count;
 });
