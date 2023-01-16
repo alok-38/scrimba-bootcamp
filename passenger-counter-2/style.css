@@ -1,5 +1,5 @@
 body {
-    background-image: url("station.jpg");
+    background-image: url("./images/station.jpg");
     background-size: cover;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
@@ -28,10 +28,24 @@ button {
     border-radius: 5px;
 }
 
+button {
+    cursor: pointer;
+}
+
 #increment-btn {
     background: darkred;
 }
 
 #save-btn {
     background: darkgreen;
+}
+
+#increment-btn:hover {
+    background: rgb(87, 1, 1);
+    color: aliceblue;
+}
+
+#save-btn:hover {
+    background: rgb(0, 66, 0);
+    color: aliceblue;
 }
