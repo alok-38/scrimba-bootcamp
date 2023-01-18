@@ -10,12 +10,26 @@ body {
 
 h1 {
     color: goldenrod;
+    font-size: 4em;
 }
 
 p {
     color: floralwhite;
+    font-size: 1.5em;
 }
 
 #message-el {
     color: floralwhite;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        height: 100vh;
+    }
 }
