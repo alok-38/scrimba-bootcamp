@@ -5,10 +5,17 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
 h1 {
     color: goldenrod;
 }
 
-#message-el {}
+p {
+    color: floralwhite;
+}
+
+#message-el {
+    color: floralwhite;
+}
