@@ -1,0 +1,14 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    background: url(./images/table.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {}
