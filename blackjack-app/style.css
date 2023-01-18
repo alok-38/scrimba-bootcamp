@@ -20,6 +20,31 @@ p {
 
 #message-el {
     color: floralwhite;
+    font-style: italic;
+}
+
+/* 
+3. Style the button according to the provided design
+text color - #016f32
+width      - 150px
+background - goldenrod
+ */
+
+button {
+    background-color: rgb(239, 174, 11);
+    width: 24ch;
+    color: #016f32;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: goldenrod;
+    color: antiquewhite;
+    font-weight: 600;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {

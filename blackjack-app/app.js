@@ -1,17 +1,30 @@
 let firstCard = 10;
-let secondCard = 7;
+let secondCard = 4;
 let sum = firstCard + secondCard;
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
 
-// Write the conditional according to these rules:
+// 1. Store the message-el paragraph in a variable called messageEl
+const messageEl = document.getElementById("message-el");
+// 2. Store the sum paragraph in a variable called sumEl
+const sumEl = document.getElementById("sum-el");
 
-// if less than or equal to 20 -> "Do you want to draw a new card? 🙂"
-// else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
-// else -> "You're out of the game! 😭"
+// 2. Create a startGame() function. Move the conditional
+const gameBtnEl = document.getElementById("game-btn");
 
-if (sum <= 20) {
-  console.log("Do you want to draw a new card? 🙂");
-} else if (age === 21) {
-  console.log("Wohoo! You've got Blackjack! 🥳");
-} else {
-  console("You're out of the game! 😭");
-}
+gameBtnEl.addEventListener("click", () => {
+  // 3. Render the sum on the page using this format -> "Sum: 14"
+  sumEl.textContent = `Sum: ${sum}`;
+  if (sum <= 20) {
+    message = "Do you want to draw a new card?";
+  } else if (sum === 21) {
+    message = "Wohoo! You've got Blackjack!";
+    hasBlackJack = true;
+  } else {
+    message = "You're out of the game!";
+    isAlive = false;
+  }
+  // 2. Display the message in the messageEl using messageEl.textContent
+  messageEl.textContent = message;
+});
