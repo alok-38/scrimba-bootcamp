@@ -39,6 +39,9 @@ button {
     outline: none;
     border: none;
     font-size: 1rem;
+    display: block;
+    margin: auto;
+    margin-top: .5rem;
 }
 
 button:hover {
