@@ -1,20 +1,48 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+const player = {
+  name: "Alok",
+  chips: 145,
+};
+
+const playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 // Make this function return a random number between 1 and 13
-function getRandomCard() {
-  return 5;
+function getRandomCard(max = 13, min = 1) {
+  // if 1     -> return 11
+  // if 11-13 -> return 10
+  const randomValue = Math.floor(Math.random() * (max - min + 1) + min);
+
+  if (randomValue === 1) {
+    return 11;
+  } else if (randomValue === 11 && randomValue === 13) {
+    return 10;
+  } else {
+    return randomValue;
+  }
 }
 
+// Semi optimized function
 function startGame() {
+  isAlive = true;
+  // Generate two random numbes
+  const generateRandomNumbers = (min, max, times) => {
+    const randoms = [];
+    for (let i = 0; i < times; i++) {
+      randoms.push(Math.floor(Math.random() * (max - min) + min));
+    }
+    return randoms;
+  };
+  // Re-assign the cards and sum variables so that the game can start
+  cards = generateRandomNumbers(1, 13);
   renderGame();
 }
 
@@ -38,8 +66,11 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  renderGame();
+  // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+  }
 }
