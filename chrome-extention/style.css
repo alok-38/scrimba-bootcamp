@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: start;
+    grid-gap: 0.5rem;
+    font-family: "Baloo 2", sans-serif;
+    background-color: #e9f2fd;
+    padding: 1rem;
+}
+
+label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.input+label {
+    margin-top: 2rem;
+}
+
+.input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
+    width: 70vw;
+    height: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.input:focus {
+    border-color: #5f9341;
+    box-shadow: 0 0 0 2px #5f9341;
+    outline: 3px solid transparent;
+}
+
+
+button.button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media screen and (-ms-high-contrast: active) {
+    button.button {
+        border: 2px solid currentcolor;
+    }
+}
+
+button.button {
+    display: block;
+    background-color: seagreen;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    width: 15ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+    transition: 220ms all ease-in-out;
+}
+
+button.button:hover,
+button.button:active {
+    background-color: #5f9341;
+}
+
+button.button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+}
