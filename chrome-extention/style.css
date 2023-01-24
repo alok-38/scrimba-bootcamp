@@ -167,3 +167,9 @@ a:hover {
 li a {
     font-size: 2rem;
 }
+
+@media screen and (max-width:100rem) {
+    .input {
+        width: 100%;
+    }
+}
