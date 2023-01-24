@@ -74,7 +74,7 @@ label {
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
     margin-bottom: .5rem;
-    width: 50vw;
+    width: 30vw;
     line-height: 1.5rem;
 }
 
@@ -88,6 +88,7 @@ label {
 button {
     font-size: 1rem;
     width: 25ch;
+    margin-bottom: 1rem;
 }
 
 button.button {
@@ -131,4 +132,38 @@ button.button:focus {
     outline-style: solid;
     outline-color: transparent;
     box-shadow: 0 0 0 4px #863ba3;
+}
+
+/* STYLE THE LIST ACCORDING TO THE DESIGN */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+li {
+    color: floralwhite;
+    display: grid;
+    grid-template-columns: 0 1fr;
+    gap: 1.75em;
+    align-items: start;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+a {
+    text-decoration: none;
+    color: floralwhite;
+    font-size: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--color-green);
+}
+
+li a {
+    font-size: 2rem;
 }
