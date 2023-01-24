@@ -4,9 +4,12 @@
 
 const myLeads = [];
 const inputBtnEl = document.getElementById("input-btn");
-
-// Log out "Button clicked!" when the user clicks the "SAVE INPUT" button
+const inputEl = document.getElementById("input-el");
 
 inputBtnEl.addEventListener("click", (event) => {
-  console.log("Button clicked!");
+  // Push the value from the inputEl into the myLeads object
+  // instead of the hard-coded "www.awesomeleads.com" value
+  // Google -> "get value from input field javascript"
+  myLeads.push(inputEl.value);
+  console.log(myLeads);
 });
