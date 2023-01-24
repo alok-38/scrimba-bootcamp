@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+#container {
+    margin-top: 30px;
+}
+
+#container button {
+    background: rgb(245, 104, 104);
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(67, 67, 67);
+    cursor: pointer;
+    letter-spacing: .1ch;
+}
+
+#container button:hover {
+    background: lightcoral;
+    color: floralwhite;
+}

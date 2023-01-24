@@ -11,6 +11,28 @@ body {
 }
 
 :root {
+
+    --color-primary: #ab79d6;
+    --color-on-primary: #351d4a;
+    --color-secondary: #d367c1;
+    --color-background: #27272c;
+    --color-on-background: #c5c5ce;
+    --color-background-alt: #1e1c22;
+    --color-background-alt-alpha: rgba(30, 28, 34, .75);
+    --color-inverse: #fff;
+    --color-gray: #8e8e8e;
+    --color-yellow: #dedf40;
+    --color-green: #62cb5c;
+    --color-blue: #00bbcb;
+    --color-on-blue: #004a09;
+    --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%, var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
+    --brand-font: "Kanit", serif;
+    --brand-font-weight: 800;
+    --brand-font-alt: "Baloo 2", system-ui, sans-serif;
+    --brand-font-alt-weight: normal;
+    --brand-font-alt-weight-bold: 500;
+
+
     --input-border: #8b8a8b;
     --input-focus-h: 245;
     --input-focus-s: 100%;
@@ -23,16 +45,19 @@ body {
     place-content: start;
     grid-gap: 0.5rem;
     font-family: "Baloo 2", sans-serif;
-    background-color: #e9f2fd;
+    background-color: var(--color-background);
     padding: 1rem;
+}
+
+label {
+    color: var(--color-green);
+    margin-bottom: .5rem;
 }
 
 label {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1;
-    display: block;
-    margin-bottom: 1rem;
 }
 
 .input+label {
@@ -45,20 +70,25 @@ label {
     font-family: inherit;
     padding: 0.25em 0.5em;
     background-color: #fff;
-    border: 2px solid var(--input-border);
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
+    margin-bottom: .5rem;
     width: 50vw;
-    height: 2.5rem;
-    margin-bottom: 1rem;
+    line-height: 1.5rem;
 }
 
 .input:focus {
-    border-color: #5f9341;
-    box-shadow: 0 0 0 2px #5f9341;
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
     outline: 3px solid transparent;
 }
 
+/* Button */
+button {
+    font-size: 1rem;
+    width: 25ch;
+}
 
 button.button {
     border: none;
@@ -75,26 +105,30 @@ button.button {
 }
 
 button.button {
-    display: block;
-    background-color: seagreen;
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    background-color: var(--color-secondary);
+    color: rgb(0, 0, 0);
     border-radius: 8px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     padding: 0.25em 0.75em;
-    width: 25ch;
+    min-width: 10ch;
     min-height: 44px;
     text-align: center;
     line-height: 1.1;
     transition: 220ms all ease-in-out;
-    letter-spacing: .1ch;
 }
 
 button.button:hover,
 button.button:active {
-    background-color: #5f9341;
+    background-color: var(--color-primary);
+    color: #fff;
 }
 
 button.button:focus {
     outline-style: solid;
     outline-color: transparent;
+    box-shadow: 0 0 0 4px #863ba3;
 }
