@@ -168,8 +168,8 @@ li a {
     font-size: 2rem;
 }
 
-@media screen and (max-width:100rem) {
+@media screen and (min-width: 320px) and (max-width: 786px) {
     .input {
-        width: 100%;
+        width: 100vw;
     }
 }
