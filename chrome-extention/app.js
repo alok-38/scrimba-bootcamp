@@ -17,6 +17,8 @@ inputBtn.addEventListener("click", (e) => {
 
   // To verify that it works:
   console.log(localStorage.getItem("myLeads"));
+  const leadsFromLocalStorage = localStorage.getItem;
+  console.log(leadsFromLocalStorage);
 });
 
 // The renderLeads() function
