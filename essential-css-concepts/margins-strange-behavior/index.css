@@ -1,0 +1,54 @@
+@import url('reset.css');
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header {
+    background-color: #b80000;
+}
+
+section {
+    padding: 30px 20px;
+    display: flex;
+}
+
+.header-text {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+.text-left {
+    padding-right: 20px;
+}
+
+img {
+    width: 250px;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+}

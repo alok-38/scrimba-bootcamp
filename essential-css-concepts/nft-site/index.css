@@ -29,14 +29,32 @@ h3 {
     font-weight: 500;
 }
 
+h1,h3 {
+    font-size: 36px;
+}
+
+h1 {
+    color: whitesmoke;
+    margin: 0;
+}
+
+h3 {
+    color: #d0aaff;
+    font-size: 20px;
+    margin: 0;
+}
+
 p {
     font-weight: 400;
 }
 
-/* Header */
 header,
 section {
     background-color: #5f29a3;
+}
+
+header {
+    padding: 45px 0;
 }
 
 footer {
