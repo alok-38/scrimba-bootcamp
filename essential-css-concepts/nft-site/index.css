@@ -18,18 +18,14 @@ body {
     color: #2b283a;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 h1,
 h2,
 h3 {
     font-weight: 500;
 }
 
-h1,h3 {
+h1,
+h3 {
     font-size: 36px;
 }
 
@@ -48,16 +44,22 @@ p {
     font-weight: 400;
 }
 
-header,
-section {
-    background-color: #5f29a3;
-}
-
 header {
     padding: 45px 0;
+    background-color: #5f29a3;
 }
 
 footer {
     background-color: aliceblue;
     color: #5f29a3;
 }
+
+/* 
+Challenge:
+1. Create a "section" selector and give it the 
+   same padding as the header.
+2. In index.html, find the image of the purple 
+   sneakers and attach a class to it. 
+3. Make it so this image takes up 100% 
+   of the section width.
+*/
